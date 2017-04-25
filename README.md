@@ -1,7 +1,7 @@
-# Microsoft Cognitive Services Vision API with Xamarin apps
+# Microsoft Cognitive Services Vision API with Xamarin.Forms
 
 ### Description
-In this demo, you will use one of the [Microsoft Cognitive Services API's](https://www.microsoft.com/cognitive-services/) to bring intelligence to a Xamarin cross-platform application.
+In this demo, you will use one of the [Microsoft Cognitive Services API's](https://www.microsoft.com/cognitive-services/) to bring intelligence to a Xamarin.Forms application.
 
 The first goal is to use the [Microsoft Cognitive Services Emotion API](https://www.microsoft.com/cognitive-services/en-us/emotion-api) to get your emotion after taking a picture of yourself with the device/emulator camera.
 
