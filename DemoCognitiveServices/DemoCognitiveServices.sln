@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCognitiveServices.Android", "DemoCognitiveServices\DemoCognitiveServices.Android\DemoCognitiveServices.Android.csproj", "{92D4DA8C-609C-4138-8832-A71950FED2D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCognitiveServices.Android", "DemoCognitiveServices.Android\DemoCognitiveServices.Android.csproj", "{92D4DA8C-609C-4138-8832-A71950FED2D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCognitiveServices", "DemoCognitiveServices\DemoCognitiveServices\DemoCognitiveServices.csproj", "{496A3B33-EC74-480E-B0E6-1805A083DF85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCognitiveServices", "DemoCognitiveServices\DemoCognitiveServices.csproj", "{496A3B33-EC74-480E-B0E6-1805A083DF85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCognitiveServices.UWP", "DemoCognitiveServices\DemoCognitiveServices.UWP\DemoCognitiveServices.UWP.csproj", "{B3FDE02A-03DC-4888-A394-3AD79C99880F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCognitiveServices.UWP", "DemoCognitiveServices.UWP\DemoCognitiveServices.UWP.csproj", "{B3FDE02A-03DC-4888-A394-3AD79C99880F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCognitiveServices.iOS", "DemoCognitiveServices\DemoCognitiveServices.iOS\DemoCognitiveServices.iOS.csproj", "{1DB99C3F-3CEE-4B2C-8CCA-12732A865932}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCognitiveServices.iOS", "DemoCognitiveServices.iOS\DemoCognitiveServices.iOS.csproj", "{1DB99C3F-3CEE-4B2C-8CCA-12732A865932}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
