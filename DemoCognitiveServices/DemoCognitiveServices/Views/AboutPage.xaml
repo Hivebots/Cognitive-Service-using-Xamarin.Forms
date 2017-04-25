@@ -7,9 +7,7 @@
     <StackLayout Padding="10">
       <Label Text="Demo Cognitive Services" FontSize="40"/>
             <Label Text="This App is the simplest type of demo."/>
-            <Label Text="This contant page contains a StackLayout, which in turn contains a few Label views (including the large one on the top and an example of handling click commands and data binding to a Label below)."/>
-      <Button Text="Click Me" Command="{Binding IncreaseCountCommand}"/>
-      <Label Text="{Binding CountDisplay}"/>
+            <Label Text="In this demo, you will use one of the Microsoft Cognitive Services API's to bring intelligence to a Xamarin cross-platform application."/>
     </StackLayout>
   </ScrollView>
 </ContentPage>
