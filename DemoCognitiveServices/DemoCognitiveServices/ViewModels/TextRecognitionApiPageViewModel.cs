@@ -1,4 +1,5 @@
-﻿using Microsoft.ProjectOxford.Vision;
+﻿using DemoCognitiveServices.Settings;
+using Microsoft.ProjectOxford.Vision;
 using Microsoft.ProjectOxford.Vision.Contract;
 using Plugin.Connectivity;
 using Plugin.Media;
@@ -50,7 +51,7 @@ namespace DemoCognitiveServices.ViewModels
         {
             TakeCommand = new Command(Take);
             UploadCommand = new Command(Upload);
-            this.visionClient = new VisionServiceClient("9da6ca1722a34e6c9ccde39978cffa88");
+            this.visionClient = new VisionServiceClient(Keys.ComputerVisionKey);
         }
 
         private async void Upload(object obj)
