@@ -23,6 +23,7 @@ namespace DemoCognitiveServices.Views
             Master = masterPage;
             Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(ComputerVisionApiPage)));
             masterPage.ListView.ItemSelected += OnItemSelected;
+            MasterBehavior = MasterBehavior.Popover;
         }
 
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)

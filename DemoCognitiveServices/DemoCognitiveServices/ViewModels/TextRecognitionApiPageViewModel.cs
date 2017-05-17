@@ -1,4 +1,4 @@
-﻿using DemoCognitiveServices.Settings;
+using DemoCognitiveServices.Settings;
 using Microsoft.ProjectOxford.Vision;
 using Microsoft.ProjectOxford.Vision.Contract;
 using Plugin.Connectivity;
@@ -17,7 +17,6 @@ namespace DemoCognitiveServices.ViewModels
 {
     public class TextRecognitionApiPageViewModel : ViewModelBase
     {
-        private readonly VisionServiceClient visionClient;
         public ICommand TakeCommand { get; set; }
         public ICommand UploadCommand { get; set; }
 
@@ -74,9 +73,14 @@ namespace DemoCognitiveServices.ViewModels
                 Result = await AnalyzePictureAsync(file.GetStream());
                 Text = BuildString(Result);
             }
+            catch (Microsoft.ProjectOxford.Vision.ClientException ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Error.Message, "OK");
+                return;
+            }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
+                await Application.Current.MainPage.DisplayAlert("Error", ex.Message, "OK");
                 return;
             }
             finally
@@ -120,7 +124,7 @@ namespace DemoCognitiveServices.ViewModels
                 return null;
             }
 
-            OcrResults ocrResult = await visionClient.RecognizeTextAsync(inputFile);
+            OcrResults ocrResult = await App.ComputerServiceClient.RecognizeTextAsync(inputFile);
             return ocrResult;
         }
 

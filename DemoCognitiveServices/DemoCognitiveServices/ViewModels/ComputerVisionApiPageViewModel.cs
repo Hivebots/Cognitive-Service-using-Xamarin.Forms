@@ -116,7 +116,7 @@ namespace DemoCognitiveServices.ViewModels
                 VisualFeature.Faces, VisualFeature.ImageType, VisualFeature.Tags };
 
             AnalysisResult analysisResult =
-                await App.ComputerClient.AnalyzeImageAsync(inputFile,
+                await App.ComputerServiceClient.AnalyzeImageAsync(inputFile,
                 visualFeatures);
 
             return analysisResult;
