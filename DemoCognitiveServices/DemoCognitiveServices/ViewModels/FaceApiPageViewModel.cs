@@ -17,7 +17,6 @@ namespace DemoCognitiveServices.ViewModels
 {
     public class FaceApiPageViewModel : ViewModelBase
     {
-        private readonly VisionServiceClient visionClient;
         public ICommand TakeCommand { get; set; }
         public ICommand UploadCommand { get; set; }
 
@@ -42,7 +41,6 @@ namespace DemoCognitiveServices.ViewModels
         {
             TakeCommand = new Command(Take);
             UploadCommand = new Command(Upload);
-            this.visionClient = new VisionServiceClient("9da6ca1722a34e6c9ccde39978cffa88");
         }
 
         private async void Upload()
@@ -105,7 +103,7 @@ namespace DemoCognitiveServices.ViewModels
 
         private async Task<Model> GetDomainModel()
         {
-            ModelResult modelResult = await visionClient.ListModelsAsync();
+            ModelResult modelResult = await App.ComputerServiceClient.ListModelsAsync();
             // At this writing, only celebrity recognition
             // is available. It is the first model in the list
             return modelResult.Models.First();
@@ -130,7 +128,7 @@ namespace DemoCognitiveServices.ViewModels
             }
 
             AnalysisInDomainResult analysisResult =
-                await visionClient.AnalyzeImageInDomainAsync(inputFile, await GetDomainModel());
+                await App.ComputerServiceClient.AnalyzeImageInDomainAsync(inputFile, await GetDomainModel());
 
             return analysisResult;
         }
